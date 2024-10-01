@@ -1,0 +1,131 @@
+
+/* Paleta de colores del SENA */
+:root {
+    --sena-green: #8cc63f;
+    --sena-orange: #f58220;
+    --sena-dark-gray: #4d4d4d;
+    --sena-light-gray: #f2f2f2;
+    --sena-white: #ffffff;
+    --sena-font: 'Arial', sans-serif;
+}
+
+/* Estilo general del cuerpo */
+body {
+    font-family: var(--sena-font);
+    background-color: var(--sena-light-gray);
+    color: var(--sena-dark-gray);
+    margin: 0;
+    padding: 20px;
+}
+
+/* Estilo del encabezado */
+h1 {
+    color: var(--sena-green);
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+/* Estilo del formulario */
+form {
+    background-color: var(--sena-white);
+    padding: 20px;
+    border: 2px solid var(--sena-green);
+    border-radius: 8px;
+    max-width: 500px;
+    margin: 0 auto;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo de los campos de entrada */
+label {
+    font-weight: bold;
+    margin-top: 10px;
+    display: block;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"] {
+    width: calc(100% - 22px);
+    padding: 10px;
+    margin: 10px 0 20px 0;
+    border: 1px solid var(--sena-dark-gray);
+    border-radius: 4px;
+    font-size: 1em;
+}
+
+/* Estilo del botón */
+button {
+    background-color: var(--sena-green);
+    color: var(--sena-white);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: var(--sena-orange);
+}
+
+/* Estilo del mensaje de éxito */
+p {
+    text-align: center;
+    color: var(--sena-green);
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+/* Estilo del enlace */
+a {
+    display: block;
+    text-align: center;
+    color: var(--sena-white);
+    background-color: var(--sena-green);
+    padding: 10px;
+    text-decoration: none;
+    margin-bottom: 20px;
+    max-width: 200px;
+    margin: 0 auto 20px auto;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+a:hover {
+    background-color: var(--sena-orange);
+}
+
+/* Estilo de la tabla */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0 auto;
+    background-color: var(--sena-white);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+th,
+td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid var(--sena-light-gray);
+}
+
+th {
+    background-color: var(--sena-green);
+    color: var(--sena-white);
+}
+
+tr:hover {
+    background-color: var(--sena-light-gray);
+}
+
+/* Estilo de celdas */
+td {
+    font-size: 1em;
+}
