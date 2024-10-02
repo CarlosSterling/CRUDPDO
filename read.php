@@ -4,14 +4,10 @@ require_once 'connect.php';
 class ListarAprendices
 {
     private $conexionDB;
-
-    // Constructor para inicializar la conexión con la base de datos
     public function __construct()
     {
         $this->conexionDB = new Conexion();
     }
-
-    // Método para obtener los datos de la tabla 'datos'
     public function obtenerRegistros()
     {
         try {
@@ -19,16 +15,12 @@ class ListarAprendices
             $obtener->execute();
             return $obtener->fetchAll(PDO::FETCH_ASSOC);
         } catch (PDOException $e) {
-            // Manejar errores y mostrar un mensaje
             echo "Error al obtener los registros: " . $e->getMessage();
-            return []; // Retornar un array vacío en caso de error
+            return [];
         }
     }
 }
-
-// Creamos la instancia de la clase ListarAprendices
 $mostrarRegistros = new ListarAprendices();
-// Obtenemos los registros para mostrarlos en una tabla
 $datos = $mostrarRegistros->obtenerRegistros();
 ?>
 <!DOCTYPE html>

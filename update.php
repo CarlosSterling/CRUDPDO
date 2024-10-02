@@ -9,8 +9,6 @@ class ActualizarAprendiz
     {
         $this->conexionDB = new Conexion();
     }
-
-    // Método para obtener los datos de un aprendiz por ID
     public function obtenerAprendizPorId($id)
     {
         try {
@@ -22,8 +20,6 @@ class ActualizarAprendiz
             echo "Error al obtener el aprendiz: " . $error->getMessage();
         }
     }
-
-    // Método para actualizar los datos de un aprendiz
     public function actualizarAprendiz($datos)
     {
         try {
@@ -43,17 +39,11 @@ class ActualizarAprendiz
         }
     }
 }
-
-// Verificar si se recibe un ID por GET
 if (isset($_GET['id']) && is_numeric($_GET['id'])) {
     $id = (int)$_GET['id'];
-
-    // Instancia de la clase para obtener y actualizar aprendiz
     $actualizarAprendiz = new ActualizarAprendiz();
     $datosAprendiz = $actualizarAprendiz->obtenerAprendizPorId($id);
 }
-
-// Verificar si se envían los datos por POST para actualizar
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['id'])) {
     $datos = [
         'id' => $_POST['id'],
@@ -62,8 +52,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['id'])) {
         'correo' => $_POST['correo'],
         'telefono' => $_POST['telefono']
     ];
-
-    // Llamar al método para actualizar los datos del aprendiz
     $actualizarAprendiz->actualizarAprendiz($datos);
 }
 ?>
